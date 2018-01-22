@@ -11,7 +11,7 @@ RUN mv TyphoonLimbo-1.0.1/* /root
 RUN cd /root
 RUN go get github.com/satori/go.uuid
 RUN rm config.go
-RUN wget https://github.com/OwnageTechGeek/TyphoonLimbo/blob/master/config.go
+RUN wget https://raw.githubusercontent.com/OwnageTechGeek/TyphoonLimbo/master/config.go
 RUN go build
 RUN mv ./TyphoonLimbo /typhoonlimbo/TyphoonLimbo
 CMD /typhoonlimbo_init.sh
