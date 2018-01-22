@@ -7,9 +7,7 @@ RUN useradd -s /bin/bash -d /typhoonlimbo -m typhoonlimbo
 RUN cd /tmp
 RUN wget https://github.com/TyphoonMC/TyphoonLimbo/archive/1.0.1.zip
 RUN unzip "1.0.1.zip"
-RUN cd "TyphoonLimbo-1.0.1"
-RUN cd "TyphoonLimbo-1.0.1"
-RUN mv * /root
+RUN mv TyphoonLimbo-1.0.1/* /root
 RUN cd /root
 RUN go get github.com/satori/go.uuid
 RUN go build
