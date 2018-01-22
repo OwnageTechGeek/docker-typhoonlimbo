@@ -8,6 +8,8 @@ RUN cd /tmp
 RUN wget https://github.com/TyphoonMC/TyphoonLimbo/archive/1.0.1.zip
 RUN unzip "1.0.1.zip"
 RUN cd "TyphoonLimbo-1.0.1"
+RUN mv * /root
+RUN cd /root
 RUN go get github.com/satori/go.uuid
 RUN go build
 RUN mv ./TyphoonLimbo /typhoonlimbo/TyphoonLimbo
