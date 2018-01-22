@@ -10,6 +10,7 @@ RUN unzip "1.0.1.zip"
 RUN mv TyphoonLimbo-1.0.1/* /root
 RUN cd /root
 RUN go get github.com/satori/go.uuid
+RUN sed -i 's/'uuid:     uuid.NewV4(),"/"uuid: uuid.Must(uuid.NewV4()),"/g' /root/config.go
 RUN go build
 RUN mv ./TyphoonLimbo /typhoonlimbo/TyphoonLimbo
 CMD /typhoonlimbo_init.sh
