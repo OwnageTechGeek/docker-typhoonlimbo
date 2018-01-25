@@ -9,7 +9,7 @@ RUN wget https://github.com/TyphoonMC/TyphoonLimbo/archive/1.0.1.zip
 RUN unzip "1.0.1.zip"
 RUN mv TyphoonLimbo-1.0.1/* /root
 RUN cd /root
-RUN go get github.com/satori/go.uuid
+RUN go get github.com/TyphoonMC/go.uuid
 RUN rm config.go
 RUN wget https://raw.githubusercontent.com/OwnageTechGeek/TyphoonLimbo/master/config.go
 RUN go build
